@@ -1,0 +1,53 @@
+\begin{Document}
+\section{Dynamic Programming}
+\subsection{Exercise 4.1}
+In Example 4.1, if $\pi$ is the equiprobable random policy, what is $q_\pi(11, \mathtt{down})$? What is $q_\pi(7, \mathtt{down})$?
+\subsubsection{Answer}
+Since in the first case the agent goes to the terminal state , $q_\pi(11, \mathtt{down})$ is -1 and in the second case ,  $q_\pi(7, \mathtt{down})$ is -12 (depends on the random policy one choses).
+
+
+\subsection{Exercise 4.2}
+In Example 4.1, suppose a new state $15$ is added to the gridworld just below state $13$, and its actions, \texttt{left}, \texttt{up}, \texttt{right}, and \texttt{down}, take the agent to states $12$, $13$, $14$, and $15$, respectively. Assume that the transitions from the original states are unchanged. What, then, is $v_\pi(15)$ for the equiprobable random policy? Now suppose the dynamics of state $13$ are also changed, such that action down from state $13$ takes the agent to the new state $15$. What is $v_\pi(15)$ for the equiprobable random policy in this case?
+
+\subsubsection{Answer}
+$v_\pi(15) = -20$ if dynamics is not changed. Not sure. (depends on the random policy into consideration).
+
+\subsection{Exercise 4.3}
+What are the equations analogous to (4.3), (4.4), and (4.5) for the action-value function $q_\pi$ and its successive approximations by a sequence of functions $q_0, q_1, q_2, \dots$?
+
+\subsubsection{Answer}
+\begin{equation}
+    q_{k+1}(s, a) = \sum_{s', r} p(s', r | s, a)\left[r + \gamma \sum_{a'} \pi(a'|s)q_k(s', a')\right]
+\end{equation}
+
+\subsection{Exercise 4.4}
+The policy iteration algorithm on the previous page has a subtle bug in that it may never terminate if the policy continually switches between two or more policies that are equally good. This is ok for pedagogy, but not for actual use. Modify the pseudocode so that convergence is guaranteed.
+
+\subsubsection{Answer}
+The $argmax_a$ can be confusing when the $q_\pi$ for different actions becomes same. It can give way to different policies. Should check only for polcies which are stable in the long run.
+
+\subsection{Exercise 4.5}
+How would policy iteration be defined for action values? Give a complete algorithm for computing $q_*$, analogous to that on page 80 for computing $q_*$. Please pay special attention to this exercise, because the ideas involved will be used throughout the rest of the book.
+
+\subsubsection{Answer}
+Given that ,
+\begin{equation}
+    v_\pi(s) = \sum_{a \in \mathcal{A}(s)} \pi(a|s)q_\pi(s, a)
+\end{equation}
+implies ,
+\begin{equation}
+    q_\pi(s, \pi'(s)) \geq \sum_{a \in \mathcal{A}(s)} \pi(a|s)q_\pi(s, a)
+\end{equation}
+if $\pi'$ is greedy with respect to $\pi$. So we know the algorithm still works for action values.
+
+\subsection{Exercise 4.6}
+Suppose you are restricted to considering only policies that are $\varepsilon$-soft, meaning that the probability of selecting each action in each state, $s$, is at least $\varepsilon / |\mathcal{A}(s)|$. Describe qualitatively the changes that would be required in each of the steps 3, 2, and 1, in that order, of the policy iteration algorithm for $v_\pi$ (page 80).
+
+
+\subsubsection{Answer}
+Considering that now the policy is stochastic changes need to made. The Bellman Equation(Bellman update) becomes $v(s) \longleftarrow \sum_{a \in \mathcal{A}(s)} \pi(a|s)\sum_{s', r}p(s', r|s, a)\left[ r + \gamma v(s') \right]$
+
+\subsection{Exercise 4.7}
+\subsubsection{Programming}
+
+\end{Document}
