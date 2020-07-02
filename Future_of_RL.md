@@ -57,4 +57,6 @@ of the agent.
     - It is usual in machine learning for human designers to set the tasks that the learning agent is expected to master. Because these tasks are known in advance and remain fixed, they can be built into the learning algorithm code.
     - we will want the agent to make its own choices about what tasks it should try to master. These might be subtasks of a specific overall task that is already known, or they might be intended to create building blocks that permit more efficient learning of many different tasks that the agent is likely to face in the future but which are currently unknown.
 
-5.     
+5. The fifth issue that we would like to highlight for future research is that of the interaction between behavior and learning via some computational analog of curiosity. (Concept of Intrinsic reward signals)
+    - When reward is not available, or notstrongly influenced by behavior, the agent is free to choose actions that maximize in some sense the learning on the tasks, that is, to use some measure of learning progress     as an internal or “intrinsic” reward, implementing a computational form of curiosity.
+    - In addition to measuring learning progress, intrinsic reward can, among other possibilities, signal the receipt of  unexpected, novel, or otherwise interesting input, or can assess the agent’s ability to cause changes in its environment.   
