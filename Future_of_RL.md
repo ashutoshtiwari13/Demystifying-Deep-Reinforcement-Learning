@@ -46,4 +46,9 @@ of the agent.
    - This issue is an instance of a general problem variously called “representation learning,” “constructive induction,” and “meta-learning”— how can we use experience not just to learn a given desired function, but to learn inductive biases such that future learning generalizes better and is thus faster?
    - It is also less common to explore representation learning within a reinforcement learning context. (See works in ICLR)
    - With use of Auxiliary tasks reinforcement learning can bring new possibilties
-   -  In reinforcement learning, the problem of representation learning can be identified with the problem of learning the state-update function.
+   -  In reinforcement learning, the problem of representation learning can be identified with the problem of learning the state-update function.(Using POMDPs)
+
+3. We still need scalable methods for planning with learned environment models
+    - Exploring this with temporally-abstract models using options framework
+    - Exploring linear models
+    - Cases of full model-based reinforcement learning, in which the environment model is learned from data and then used for planning, are rare.   
