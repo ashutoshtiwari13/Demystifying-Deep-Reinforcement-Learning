@@ -52,3 +52,9 @@ of the agent.
     - Exploring this with temporally-abstract models using options framework
     - Exploring linear models
     - Cases of full model-based reinforcement learning, in which the environment model is learned from data and then used for planning, are rare.   
+
+4. Future scope also revolves around automating the choice of tasks on which an agent works and uses to structure its developing competence.
+    - It is usual in machine learning for human designers to set the tasks that the learning agent is expected to master. Because these tasks are known in advance and remain fixed, they can be built into the learning algorithm code.
+    - we will want the agent to make its own choices about what tasks it should try to master. These might be subtasks of a specific overall task that is already known, or they might be intended to create building blocks that permit more efficient learning of many different tasks that the agent is likely to face in the future but which are currently unknown.
+
+5.     
