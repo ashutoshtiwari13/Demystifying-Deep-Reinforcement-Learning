@@ -36,7 +36,7 @@ computational reinforcement learning as well.
 - The optimization algorithm evaluates each candidate reward signal by running the reinforcement learning system with that signal for some number of steps, and then scoring the overall result by a “high-level” objective function intended to encode the designer’s true goal, ignoring the limitations
 of the agent.
 
-## Issues to be addressed
+## Issues to be addressed/Future Scope
 1. We still need powerful parametric function approximation techniques that work well in fully increamental and online settings.
    - Methods based on deep learning and ANNs area major step in this direction but, still, only work well with batch training on large data sets, with training from extensive offline self play, or with learning from the interleaved experience of multiple agents on the same task.
    - These and other settings are ways of working around a basic limitation of today’s deep learning methods, which struggle to learn rapidly in the incremental, online settings that are most natural for the reinforcement learning algorithms emphasized. The problem is sometimes described as one of “catastrophic interference” or “correlated data.”
@@ -61,3 +61,4 @@ of the agent.
     - When reward is not available, or notstrongly influenced by behavior, the agent is free to choose actions that maximize in some sense the learning on the tasks, that is, to use some measure of learning progress     as an internal or “intrinsic” reward, implementing a computational form of curiosity.
     - In addition to measuring learning progress, intrinsic reward can, among other possibilities, signal the receipt of  unexpected, novel, or otherwise interesting input, or can assess the agent’s ability to cause changes in its environment.   
     - Intrinsic reward signals generated in these ways can be used by an agent to pose tasks for itself by defining auxiliary tasks, GVFs, or options, as discussed above, so that skills learned in this way can contribute to the agent’s ability to master future tasks.
+6. Developing methods to make it acceptably safe to embed reinforcement learning agents into physical environments.
